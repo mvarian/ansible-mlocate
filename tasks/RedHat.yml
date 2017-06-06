@@ -1,11 +1,11 @@
 ---
-- name: Install latest mlocate and update locate database
+- name: Install latest mlocate and update locate database (RHEL)
   yum: name=* state=latest
 
-- name: install mlocate 
+- name: Install mlocate (RHEL)
   package: name={{item}} state=latest
   with_items:
     - mlocate
 
-- name: Update locate database
+- name: Update locate database (RHEL)
   command: updatedb
